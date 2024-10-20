@@ -1,0 +1,26 @@
+name: Lint, Test, & Deploy
+on: 
+  push:
+    branches: [ "main" ]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Linting
+        run: echo "Linting ..."
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Testing
+        run: echo "Testing ..."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: deploy
+        run: echo "Deploying ..."
