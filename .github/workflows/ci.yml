@@ -9,7 +9,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Linting
-        run: echo "Linting ..."
+        run: npm lint
   test:
     runs-on: ubuntu-latest
     steps:
