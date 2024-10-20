@@ -8,8 +8,10 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Install/Setup Node
-        uses: actions/setup-node@v4
+      - name: Install lint/yarn
+        uses: stefanoeb/eslint-action@1.0.2
+      # - name: Install/Setup Node
+      #   uses: actions/setup-node@v4
       - name: Linting
         run: npm run lint
   test:
