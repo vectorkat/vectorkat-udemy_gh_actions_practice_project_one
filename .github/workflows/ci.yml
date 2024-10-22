@@ -43,5 +43,9 @@ jobs:
         run: npm ci
       - name: Deploy
         run: echo "Deploying ..."
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
 
 
